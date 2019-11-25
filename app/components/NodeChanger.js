@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { remote } from 'electron';
 import log from 'electron-log';
-import { Daemon } from 'turtlecoin-wallet-backend';
+import { Daemon } from 'chimera-wallet-backend';
 import {
   il8n,
   session,
@@ -67,7 +67,7 @@ export default class NodeChanger extends Component<Props, State> {
     eventEmitter.off('nodeChangeComplete', this.handleNodeChangeComplete);
   }
 
-  browseForTurtleCoind = () => {
+  browseForchimerad = () => {
     const options = {
       defaultPath: remote.app.getPath('documents')
     };
@@ -299,7 +299,7 @@ export default class NodeChanger extends Component<Props, State> {
           <div className="control">
             <button
               className="button is-warning"
-              onClick={this.browseForTurtleCoind}
+              onClick={this.browseForchimerad}
             >
               <span className="icon is-small">
                 <i className="fas fa-folder-open" />

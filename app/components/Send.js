@@ -218,7 +218,7 @@ export default class Send extends Component<Props, State> {
       return;
     }
 
-    const fee = displayCurrency === 'TRTL' ? 0.1 : 0.1 * fiatPrice;
+    const fee = displayCurrency === 'CMRA' ? 1 : 1 * fiatPrice;
 
     const totalAmount = (
       parseFloat(enteredAmount) +
@@ -390,7 +390,7 @@ export default class Send extends Component<Props, State> {
 
     const [hash, err] = await session.sendTransaction(
       sendToAddress,
-      displayCurrency === 'TRTL'
+      displayCurrency === 'CMRA'
         ? Number(enteredAmount) * 100
         : (Number(enteredAmount) * 100) / fiatPrice,
       paymentID
@@ -531,11 +531,11 @@ export default class Send extends Component<Props, State> {
         : totalAmount - 10 - parseInt(session.daemon.feeAmount, 10);
     this.setState({
       totalAmount:
-        displayCurrency === 'TRTL'
+        displayCurrency === 'CMRA'
           ? session.atomicToHuman(totalAmount, false).toString()
           : session.atomicToHuman(totalAmount * fiatPrice, false).toString(),
       enteredAmount:
-        displayCurrency === 'TRTL'
+        displayCurrency === 'CMRA'
           ? session.atomicToHuman(enteredAmount, false).toString()
           : session.atomicToHuman(enteredAmount * fiatPrice, false).toString()
     });
@@ -716,7 +716,7 @@ export default class Send extends Component<Props, State> {
                           placeholder={`How much to send (eg. ${
                             displayCurrency === 'fiat'
                               ? exampleAmount
-                              : '100 TRTL'
+                              : '100 CMRA'
                           })`}
                           value={enteredAmount}
                           onChange={this.handleAmountChange}

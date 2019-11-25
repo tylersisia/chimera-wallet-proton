@@ -2,7 +2,7 @@
   "name": "proton-wallet",
   "productName": "Proton",
   "version": "1.1.0",
-  "description": "TurtleCoin wallet based on React, React Router, Webpack, and React Hot Loader",
+  "description": "Chimera wallet based on React, React Router, Webpack, and React Hot Loader",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -98,7 +98,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turtlecoin/turtle-wallet-proton.git"
+    "url": "git+https://github.com/tylersisia/chimera-wallet-proton.git"
   },
   "author": {
     "name": "ExtraHash",
@@ -119,15 +119,15 @@
   ],
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/turtlecoin/turtle-wallet-proton/issues"
+    "url": "https://github.com/tylersisia/chimera-wallet-proton/issues"
   },
   "keywords": [
-    "turtlecoin",
+    "chimera",
     "gui wallet",
     "electron",
     "proton"
   ],
-  "homepage": "https://github.com/turtlecoin/turtle-wallet-proton#readme",
+  "homepage": "https://github.com/tylersisia/chimera-wallet-proton#readme",
   "jest": {
     "testURL": "http://localhost/",
     "moduleNameMapper": {
@@ -272,7 +272,7 @@
     "semver": "^6.2.0",
     "source-code-pro": "^2.30.2",
     "tail": "^2.0.3",
-    "turtlecoin-wallet-backend": "^4.0.4"
+    "chimera-wallet-backend": "^4.0.4"
   },
   "devEngines": {
     "node": ">=10.x",

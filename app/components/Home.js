@@ -316,7 +316,7 @@ export default class Home extends Component<Props, State> {
                         )}
                         <td>
                           <p className="has-text-right">
-                            {displayCurrency === 'TRTL' &&
+                            {displayCurrency === 'CMRA' &&
                               session.atomicToHuman(tx[3], true)}
                             {displayCurrency === 'fiat' &&
                               symbolLocation === 'prefix' &&

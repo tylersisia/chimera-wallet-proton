@@ -419,10 +419,10 @@ eventEmitter.on('sendNotification', function sendNotification(amount) {
 
   if (notifications) {
     const notif = new window.Notification('Transaction Received!', {
-      body: `${il8n.just_received} ${amount} ${il8n.TRTL}`
+      body: `${il8n.just_received} ${amount} ${il8n.CMRA}`
     });
     if (notif) {
-      log.debug(`Sent notification: You've just received ${amount} TRTL.`);
+      log.debug(`Sent notification: You've just received ${amount} CMRA.`);
     }
   }
 });

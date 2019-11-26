@@ -72,7 +72,7 @@ const customStyles = {
   })
 };
 
-export default class Send extends Component<Props, State> {
+export default class SendRecurring extends Component<Props, State> {
   props: Props;
 
   state: State;
@@ -888,7 +888,7 @@ export default class Send extends Component<Props, State> {
   }
 }
 
-Send.defaultProps = {
+SendRecurring.defaultProps = {
   uriAddress: '',
   uriPaymentID: ''
 };

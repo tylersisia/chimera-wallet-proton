@@ -257,7 +257,7 @@ export default class SendRecurring extends Component<Props, State> {
     }
 
     const subtractFee =
-      Number(totalAmount) * 100 - 10 - parseInt(session.daemon.feeAmount, 10);
+      Number(totalAmount) * 100 - 100 - parseInt(session.daemon.feeAmount, 100);
 
     const enteredAmount =
       subtractFee < 0
@@ -477,7 +477,7 @@ export default class SendRecurring extends Component<Props, State> {
     await this.setState({
       selectedContact: { label: sendToAddress, value: sendToAddress },
       enteredAmount: String(amount / 100),
-      totalAmount: String((amount + 10) / 100),
+      totalAmount: String((amount + 100) / 100),
       sendToAddress,
       paymentID
     });
@@ -522,13 +522,13 @@ export default class SendRecurring extends Component<Props, State> {
     const { unlockedBalance, fiatPrice, displayCurrency } = this.state;
 
     const totalAmount =
-      unlockedBalance - 10 - parseInt(session.daemon.feeAmount, 10) <= 0
+      unlockedBalance - 100 - parseInt(session.daemon.feeAmount, 100) <= 0
         ? 0
         : unlockedBalance;
     const enteredAmount =
-      unlockedBalance - 10 - parseInt(session.daemon.feeAmount, 10) <= 0
+      unlockedBalance - 100 - parseInt(session.daemon.feeAmount, 100) <= 0
         ? 0
-        : totalAmount - 10 - parseInt(session.daemon.feeAmount, 10);
+        : totalAmount - 100 - parseInt(session.daemon.feeAmount, 100);
     this.setState({
       totalAmount:
         displayCurrency === 'CMRA'

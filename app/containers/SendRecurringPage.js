@@ -2,7 +2,7 @@
 //
 // Please see the included LICENSE file for more information.
 import React, { Component } from 'react';
-import Send from '../components/Send';
+import Send from '../components/SendRecurring';
 
 type Props = {
   match: {
@@ -13,7 +13,7 @@ type Props = {
   }
 };
 
-export default class SendPage extends Component<Props> {
+export default class SendRecurringPage extends Component<Props> {
   props: Props;
 
   render() {

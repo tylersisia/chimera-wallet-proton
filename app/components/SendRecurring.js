@@ -257,7 +257,7 @@ export default class SendRecurring extends Component<Props, State> {
     }
 
     const subtractFee =
-      Number(totalAmount) * 100 - 10 - parseInt(session.daemon.feeAmount, 100);
+      Number(totalAmount) * 100 - 10 - parseInt(session.daemon.feeAmount, 10);
 
     const enteredAmount =
       subtractFee < 0
@@ -477,7 +477,7 @@ export default class SendRecurring extends Component<Props, State> {
     await this.setState({
       selectedContact: { label: sendToAddress, value: sendToAddress },
       enteredAmount: String(amount / 100),
-      totalAmount: String((amount + 100) / 100),
+      totalAmount: String((amount + 10) / 100),
       sendToAddress,
       paymentID
     });

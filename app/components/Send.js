@@ -647,7 +647,7 @@ export default class Send extends Component<Props, State> {
         <Creatable
           multi
           options={this.autoCompleteContacts}
-          placeholder="Enter a TurtleCoin address or a contact name to send funds to"
+          placeholder="Enter a Chimera address or a contact name to send funds to"
           // eslint-disable-next-line no-unused-vars
           noOptionsMessage={inputValue => null}
           styles={customStyles}

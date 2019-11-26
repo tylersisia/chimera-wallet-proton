@@ -823,7 +823,7 @@ export default class Send extends Component<Props, State> {
                       disabled={looping}
                     >
                       <span className="icon is-small">
-                        <i className="fa fa-flask" />
+                        <i className="fa fa-fast-forward" />
                       </span>
                       &nbsp;&nbsp;Test
                     </a>

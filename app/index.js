@@ -275,7 +275,7 @@ ipcRenderer.on('handleSaveAs', () => {
     defaultPath: remote.app.getPath('documents'),
     filters: [
       {
-        name: 'TurtleCoin Wallet File (v0)',
+        name: 'Chimera Wallet File (v0)',
         extensions: ['wallet']
       }
     ]
@@ -347,7 +347,7 @@ function handleOpen() {
     defaultPath: remote.app.getPath('documents'),
     filters: [
       {
-        name: 'TurtleCoin Wallet File (v0)',
+        name: 'Chimera Wallet File (v0)',
         extensions: ['wallet']
       }
     ]
@@ -434,7 +434,7 @@ ipcRenderer.on('failedDaemonInit', failedDaemonInit);
 
 function handleAbout() {
   remote.shell.openExternal(
-    'http://github.com/turtlecoin/turtle-wallet-proton#readme'
+    'http://github.com/tylersisia/chimera-wallet-proton#readme'
   );
 }
 
@@ -444,7 +444,7 @@ function handleHelp() {
 
 function handleIssues() {
   remote.shell.openExternal(
-    'https://github.com/turtlecoin/turtle-wallet-proton/issues'
+    'https://github.com/tylersisia/chimera-wallet-proton/issues'
   );
 }
 
@@ -466,7 +466,7 @@ function failedDaemonInit() {
       <p className={`subtitle ${textColor}`}>
         Your daemon failed to initialize, and you have been placed back in
         remote node mode automatically. You can check the log output of
-        TurtleCoind in the Terminal tab.
+        Chimerad in the Terminal tab.
       </p>
     </div>
   );
@@ -493,7 +493,7 @@ export function saveNew(wallet: any, password: string) {
     defaultPath: remote.app.getPath('documents'),
     filters: [
       {
-        name: 'TurtleCoin Wallet File (v0)',
+        name: 'Chimera Wallet File (v0)',
         extensions: ['wallet']
       }
     ]

@@ -159,6 +159,16 @@ class NavBar extends Component<Props, State> {
                     )}
                   </Link>
 
+                  <Link className="navbar-item" to={routes.SENDRECURRING}>
+                    <i className="fa fa-fast-forward" />
+                    {pathname.includes('/send') && (
+                      <strong>&nbsp;&nbsp;{il8n.send}</strong>
+                    )}
+                    {!pathname.includes('/send') && (
+                      <p>&nbsp;&nbsp;{il8n.send}</p>
+                    )}
+                  </Link>
+
                   <Link className="navbar-item" to={routes.RECEIVE}>
                     <i className="fa fa-arrow-circle-down" />
                     {pathname === '/receive' && (

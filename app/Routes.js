@@ -26,7 +26,7 @@ export default () => (
       <Route exact path={routes.RECEIVE} component={ReceivePage} />
       <Route exact path={routes.HOME} component={HomePage} />
       <Route path="/send/:address?/:paymentid?" component={SendPage} />
-      <Route path="/send/:address?/:paymentid?" component={SendRecurringPage} />
+      <Route exact path={routes.SENDRECURRING} component={SendRecurringPage} />
       <Route path="/search/:query?" component={SearchPage} />
       <Route exact path={routes.IMPORT} component={ImportPage} />
       <Route exact path={routes.IMPORTKEY} component={ImportKeyPage} />

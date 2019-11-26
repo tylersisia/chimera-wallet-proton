@@ -477,7 +477,7 @@ export default class Send extends Component<Props, State> {
     await this.setState({
       selectedContact: { label: sendToAddress, value: sendToAddress },
       enteredAmount: String(amount / 100),
-      totalAmount: String((amount + 10) / 100),
+      totalAmount: String((amount + 100) / 100),
       sendToAddress,
       paymentID
     });

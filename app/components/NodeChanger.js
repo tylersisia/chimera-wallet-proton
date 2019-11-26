@@ -52,7 +52,7 @@ export default class NodeChanger extends Component<Props, State> {
     );
     this.handleNodeChangeComplete = this.handleNodeChangeComplete.bind(this);
     this.toggleLocalDaemon = this.toggleLocalDaemon.bind(this);
-    this.browseForTurtleCoind = this.browseForTurtleCoind.bind(this);
+    this.browseForchimerad = this.browseForchimerad.bind(this);
   }
 
   componentWillMount() {
@@ -285,7 +285,7 @@ export default class NodeChanger extends Component<Props, State> {
         <br />
         <br />
         <p className={`has-text-weight-bold ${textColor}`}>
-          TurtleCoind.log file location:
+          chimerad.log file location:
         </p>
         <div className="field has-addons">
           <div className="control is-expanded">

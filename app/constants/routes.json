@@ -2,6 +2,7 @@
   "HOME": "/",
   "RECEIVE": "/receive",
   "SEND": "/send",
+  "SENDRECURRING": "/sendrecurring",
   "IMPORT": "/import",
   "IMPORTKEY": "/importkey",
   "SETTINGS": "/settings",

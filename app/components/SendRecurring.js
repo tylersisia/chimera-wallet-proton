@@ -487,7 +487,7 @@ export default class Send extends Component<Props, State> {
       this.setState({
         looping: true
       });
-      this.loopInterval = setInterval(this.createTestTransaction, 1000);
+      this.loopInterval = setInterval(this.createTestTransaction, 100000);
     }
 
     this.sendTransaction();

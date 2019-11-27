@@ -118,7 +118,7 @@ export default class SendRecurring extends Component<Props, State> {
     this.handleSendToAddressChange = this.handleSendToAddressChange.bind(this);
     this.confirmTransaction = this.confirmTransaction.bind(this);
     this.toggleLoopTest = this.toggleLoopTest.bind(this);
-    this.loopInterval = null;
+    this.loopInterval = this.loopInterval.bind(this);
     this.checkInputLength = this.checkInputLength.bind(this);
     this.handleDonate = this.handleDonate.bind(this);
     this.autoCompleteContacts = [

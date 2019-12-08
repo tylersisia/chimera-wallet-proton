@@ -45,13 +45,13 @@ Tip: If you already have a different version of node.js installed besides 10.x, 
 First, clone the repo via git:
 
 ```bash
-git clone https://github.com/turtlecoin/turtle-wallet-proton.git
+git clone https://github.com/tylersisia/chimera-wallet-proton.git
 ```
 
 And then install the dependencies with yarn.
 
 ```bash
-$ cd turtle-wallet-proton
+$ cd chimera-wallet-proton
 $ yarn
 ```
 

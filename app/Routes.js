@@ -8,7 +8,6 @@ import App from './containers/App';
 import HomePage from './containers/HomePage';
 import ReceivePage from './containers/ReceivePage';
 import SendPage from './containers/SendPage';
-import SendRecurringPage from './containers/SendRecurringPage';
 import ImportPage from './containers/ImportPage';
 import ImportKeyPage from './containers/ImportKeyPage';
 import SettingsPage from './containers/SettingsPage';
@@ -26,7 +25,6 @@ export default () => (
       <Route exact path={routes.RECEIVE} component={ReceivePage} />
       <Route exact path={routes.HOME} component={HomePage} />
       <Route path="/send/:address?/:paymentid?" component={SendPage} />
-      <Route exact path={routes.SENDRECURRING} component={SendRecurringPage} />
       <Route path="/search/:query?" component={SearchPage} />
       <Route exact path={routes.IMPORT} component={ImportPage} />
       <Route exact path={routes.IMPORTKEY} component={ImportKeyPage} />

@@ -240,7 +240,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
-    "bulma": "^0.7.5",
+    "bulma": "^0.8.0",
     "bulma-extensions": "^6.2.7",
     "connected-react-router": "^6.6.1",
     "core-js": "3.4.7",

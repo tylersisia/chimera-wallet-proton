@@ -243,7 +243,7 @@
     "bulma": "^0.7.5",
     "bulma-extensions": "^6.2.7",
     "connected-react-router": "^6.6.1",
-    "core-js": "2",
+    "core-js": "3.4.7",
     "csv-writer": "^1.4.0",
     "devtron": "^1.4.0",
     "electron-context-menu": "https://github.com/ExtraHash/electron-context-menu",

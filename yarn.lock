@@ -2137,17 +2137,17 @@ babel-core@^6.22.1, babel-core@^6.26.0:
     slash "^1.0.0"
     source-map "^0.5.7"
 
-babel-eslint@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.1.tgz#919681dc099614cd7d31d45c8908695092a1faed"
-  integrity sha512-z7OT1iNV+TjOwHNLLyJk+HN+YVWX+CLE6fPD2SymJZOZQBs+QIexFjhm4keGTm8MW9xr4EC9Q0PbaLB24V5GoQ==
+babel-eslint@^10.0.3:
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.3.tgz#81a2c669be0f205e19462fed2482d33e4687a88a"
+  integrity sha512-z3U7eMY6r/3f3/JB9mTsLjyxrv0Yb1zb8PCWCLpguxfCzBIZUwy23R1t/XKewP+8mEN2Ck8Dtr4q20z6ce6SoA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/parser" "^7.0.0"
     "@babel/traverse" "^7.0.0"
     "@babel/types" "^7.0.0"
-    eslint-scope "3.7.1"
     eslint-visitor-keys "^1.0.0"
+    resolve "^1.12.0"
 
 babel-generator@^6.26.0:
   version "6.26.1"
@@ -3245,7 +3245,7 @@ buffer@^5.1.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-buffer@^5.4.0:
+buffer@^5.4.3:
   version "5.4.3"
   resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.4.3.tgz#3fbc9c69eb713d323e3fc1a895eee0710c072115"
   integrity sha512-zvj65TkFeIt3i6aj5bIvJDzjjQQGs4o/sNoezg1F1kYap9Nu2jcUdpwzRSJTHMMzG0H7bZkn4rNQpImhuxWX2A==
@@ -3563,6 +3563,54 @@ cheerio@^1.0.0-rc.2:
     htmlparser2 "^3.9.1"
     lodash "^4.15.0"
     parse5 "^3.0.1"
+
+chimera-crypto@^3.1.0:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/chimera-crypto/-/chimera-crypto-3.1.2.tgz#1a466a41dc6f6dcee5d65b8015c98627e5240ce9"
+  integrity sha512-UwgtBn0MTUJ6yumedEmbKmpchJ5BD+rvYm8eNeYwP7hXE0DgIuGm1ltCiNLKcJEs9nSbDzgEAFU8WFZJN/T3gQ==
+  dependencies:
+    bindings "^1.5.0"
+    nan "^2.14.0"
+
+chimera-utils@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/chimera-utils/-/chimera-utils-1.0.17.tgz#c795e07710c8db2d5ef82b0fdf6c83996e499d87"
+  integrity sha512-lvlGF/72IIZfLmjbYp6VrZyV2E6cWAEweqS1P/FHLiCnmcSZVAkKj32MVtuWMWIJgPwoc7d2eCt9B8PFX0KSqw==
+  dependencies:
+    crc "^3.8.0"
+    get-random-values "^1.2.0"
+    numeral "^2.0.6"
+    secure-random-string "^1.1.0"
+    varint "^5.0.0"
+  optionalDependencies:
+    chimera-crypto "^3.1.0"
+
+chimera-wallet-backend@^4.0.4:
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/chimera-wallet-backend/-/chimera-wallet-backend-4.0.15.tgz#fb5904b7513bef0e502024772e33e9b329f6a8f4"
+  integrity sha512-9L8MLinLDetQLxCU6C2ynyg3dlI2qnybeGUFo8CtjPmB+H2jyDZEdWIosGnSZBY2dBz0zGSJDxvQHF1E86ErDw==
+  dependencies:
+    chimera-utils "^1.0.17"
+    chimera-wallet-backend "git+https://github.com/tylersisia/chimera-wallet-backend-js.git"
+    lodash "^4.17.15"
+    object-sizeof "^1.5.2"
+    pbkdf2 "^3.0.17"
+    request "^2.88.0"
+    request-promise-native "^1.0.8"
+    typescript "^3.7.2"
+
+"chimera-wallet-backend@git+https://github.com/tylersisia/chimera-wallet-backend-js.git":
+  version "4.0.12"
+  uid de7086657000c8c8491a735b1aa8e28ad56f8134
+  resolved "git+https://github.com/tylersisia/chimera-wallet-backend-js.git#de7086657000c8c8491a735b1aa8e28ad56f8134"
+  dependencies:
+    chimera-utils "^1.0.17"
+    lodash "^4.17.15"
+    object-sizeof "^1.5.2"
+    pbkdf2 "^3.0.17"
+    request "^2.88.0"
+    request-promise-native "^1.0.8"
+    typescript "^3.7.2"
 
 chokidar@^2.0.0, chokidar@^2.0.2:
   version "2.1.5"
@@ -5428,14 +5476,6 @@ eslint-rule-docs@^1.1.5:
   version "1.1.88"
   resolved "https://registry.yarnpkg.com/eslint-rule-docs/-/eslint-rule-docs-1.1.88.tgz#206af1f82450f55c563d861de2006cf08d979dda"
   integrity sha512-hKI6Qb1jZ+EgK5yeNs+Kos+t48bZbGl4G0BJ4vYWaCcENtb/+3OaLwM0wGO04oVJQ/7s6sf2kF8xP5++bo7aPA==
-
-eslint-scope@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
-  integrity sha1-PWPD7f2gLgbgGkUq2IyqzHzctug=
-  dependencies:
-    esrecurse "^4.1.0"
-    estraverse "^4.1.1"
 
 eslint-scope@^4.0.0, eslint-scope@^4.0.3:
   version "4.0.3"
@@ -9525,12 +9565,12 @@ object-keys@~0.4.0:
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-0.4.0.tgz#28a6aae7428dd2c3a92f3d95f21335dd204e0336"
   integrity sha1-KKaq50KN0sOpLz2V8hM13SBOAzY=
 
-object-sizeof@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/object-sizeof/-/object-sizeof-1.5.1.tgz#da2ed6ce9c7c0b0f7cf42e8b370f493ec41e0936"
-  integrity sha512-htKkjOdWqxZQg5V6/M0tA/yLiYaRize4MzAyzibuR9Q0Jy/WYFRmTH4FYiGTdTXi2hbzxzdnaLv4K8N4VX7YTQ==
+object-sizeof@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/object-sizeof/-/object-sizeof-1.5.2.tgz#d2db77107779e4c522a390fbf5e715d848395dc1"
+  integrity sha512-5M9MYfLX3GsUv8YVSxypUkjQvpj5p3lX5gSaZCcV5973EqcQYp576vNU/620C1V6UaCdxeYGk3/QzEWz7uLvUQ==
   dependencies:
-    buffer "^5.4.0"
+    buffer "^5.4.3"
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -11392,12 +11432,28 @@ request-promise-core@1.1.2:
   dependencies:
     lodash "^4.17.11"
 
-request-promise-native@^1.0.5, request-promise-native@^1.0.7:
+request-promise-core@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.3.tgz#e9a3c081b51380dfea677336061fea879a829ee9"
+  integrity sha512-QIs2+ArIGQVp5ZYbWD5ZLCY29D5CfWizP8eWnm8FoGD1TX61veauETVQbrV60662V0oFBkrDOuaBI8XgtuyYAQ==
+  dependencies:
+    lodash "^4.17.15"
+
+request-promise-native@^1.0.5:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/request-promise-native/-/request-promise-native-1.0.7.tgz#a49868a624bdea5069f1251d0a836e0d89aa2c59"
   integrity sha512-rIMnbBdgNViL37nZ1b3L/VfPOpSi0TqVDQPAvO6U14lMzOLrt5nilxCQqtDKhZeDiW0/hkCXGoQjhgJd/tCh6w==
   dependencies:
     request-promise-core "1.1.2"
+    stealthy-require "^1.1.1"
+    tough-cookie "^2.3.3"
+
+request-promise-native@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/request-promise-native/-/request-promise-native-1.0.8.tgz#a455b960b826e44e2bf8999af64dff2bfe58cb36"
+  integrity sha512-dapwLGqkHtwL5AEbfenuzjTYg35Jd6KPytsC2/TLkVMz8rm+tNt72MGUWT1RP/aYawMpN6HqbNGBQaRcBtjQMQ==
+  dependencies:
+    request-promise-core "1.1.3"
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
@@ -11513,6 +11569,13 @@ resolve@^1.10.0, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.10.0.tgz#3bdaaeaf45cc07f375656dfd2e54ed0810b101ba"
   integrity sha512-3sUr9aq5OfSg2S9pNtPA9hL1FVEAjvfOC4leW0SNf/mpnaakz2a9femSd6LqAww2RaFctwyf1lCqnTHuF1rxDg==
+  dependencies:
+    path-parse "^1.0.6"
+
+resolve@^1.12.0:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.13.1.tgz#be0aa4c06acd53083505abb35f4d66932ab35d16"
+  integrity sha512-CxqObCX8K8YtAhOBRg+lrcdn+LK+WYOS8tSjqSFbjtrI5PnS63QPhZl4+yKfrU9tdsbMu9Anr/amegT87M9Z6w==
   dependencies:
     path-parse "^1.0.6"
 
@@ -13238,47 +13301,6 @@ tunnel-agent@0.6.0, tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-turtlecoin-crypto@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/turtlecoin-crypto/-/turtlecoin-crypto-3.0.5.tgz#a6a4ebd2775eb26d18eb4e4bd83b00ec7be66796"
-  integrity sha512-X8t75lVQHMmFOOSqxz+FdYbkZDtjzwHvFdxVC9aE7AEuhMQjWkjDyV0frwRlKcBeReJG0kmKaqOKVLpPAcVyOg==
-  dependencies:
-    bindings "^1.5.0"
-    nan "^2.14.0"
-
-turtlecoin-rpc@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/turtlecoin-rpc/-/turtlecoin-rpc-1.0.3.tgz#51a43f06680b4924682a8c5ab40427299c44d50f"
-  integrity sha512-cBrL4I8l8mvw8okQiw1xiH8YsbG4F2aucrPvOyQJupQxxokc1rTtgDUSMI6YNTjqt4qBPQUnPq5oKVGPsHy+dg==
-  dependencies:
-    request "^2.88.0"
-    request-promise-native "^1.0.7"
-
-turtlecoin-utils@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/turtlecoin-utils/-/turtlecoin-utils-1.0.6.tgz#0b33e945c8c05334391fcdb7dbdb65d059dd8e83"
-  integrity sha512-ldMF38Z+Nxti/Ol/pVKnsccFEUBbRE14ZknwZqoSCfmVl+pBwHSgC5Xr5oogUyUM0x0djCB+Nsv/yYlSNgAHgA==
-  dependencies:
-    crc "^3.8.0"
-    get-random-values "^1.2.0"
-    numeral "^2.0.6"
-    secure-random-string "^1.1.0"
-    varint "^5.0.0"
-  optionalDependencies:
-    turtlecoin-crypto "^3.0.5"
-
-turtlecoin-wallet-backend@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/turtlecoin-wallet-backend/-/turtlecoin-wallet-backend-4.0.4.tgz#b6c69c07292c8b6c49cece28c753658280f8419b"
-  integrity sha512-Dzu1pK0Ec4EjVTaW7g1IcEzV5stMKy3nmjR4hTXeHJr2TVNTNdlvwiqte/83iz7gN+LC94BlBrhzUjwNgd45Og==
-  dependencies:
-    lodash "^4.17.15"
-    object-sizeof "^1.5.1"
-    pbkdf2 "^3.0.17"
-    turtlecoin-rpc "^1.0.2"
-    turtlecoin-utils "^1.0.6"
-    typescript "^3.6.2"
-
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
@@ -13319,10 +13341,10 @@ typescript@^3.3.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.1.tgz#b6691be11a881ffa9a05765a205cb7383f3b63c6"
   integrity sha512-3NSMb2VzDQm8oBTLH6Nj55VVtUEpe/rgkIzMir0qVoLyjDZlnMBva0U6vDiV3IH+sl/Yu6oP5QwsAQtHPmDd2Q==
 
-typescript@^3.6.2:
-  version "3.6.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.3.tgz#fea942fabb20f7e1ca7164ff626f1a9f3f70b4da"
-  integrity sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
+typescript@^3.7.2:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.3.tgz#b36840668a16458a7025b9eabfad11b66ab85c69"
+  integrity sha512-Mcr/Qk7hXqFBXMN7p7Lusj1ktCBydylfQM/FZCk5glCNQJrCUKPkMHdo9R0MTFWsC/4kPFvDS0fDPvukfCkFsw==
 
 ua-parser-js@^0.7.18:
   version "0.7.19"

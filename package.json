@@ -250,7 +250,7 @@
     "electron-debug": "^2.1.0",
     "electron-is-dev": "^1.1.0",
     "electron-log": "^3.0.9",
-    "file-loader": "^4.2.0",
+    "file-loader": "^5.0.2",
     "history": "^4.9.0",
     "jdenticon": "^2.2.0",
     "qrcode.react": "^0.9.3",
